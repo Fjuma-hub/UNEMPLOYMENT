@@ -12,8 +12,7 @@ const POWER_BI_EMBED_URL =
     "PASTE_YOUR_POWER_BI_EMBED_URL_HERE";
 
 // Replace this with the email address for receiving messages.
-const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
-
+const CONTACT_EMAIL = "fayzafaith785@gmail.com";
 
 /* 2. MOBILE NAVIGATION */
 
@@ -124,70 +123,42 @@ const contactForm = document.getElementById("contactForm");
 
 const formMessage = document.getElementById("formMessage");
 
-
 if (contactForm) {
 
     contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-
-        // Collect the information entered by the visitor.
-
-        const formData = new FormData(contactForm);
-
-        const name = String(
-            formData.get("name") || ""
-        ).trim();
-
-        const email = String(
-            formData.get("email") || ""
-        ).trim();
-
-        const subject = String(
-            formData.get("subject") || ""
-        ).trim();
-
-        const message = String(
-            formData.get("message") || ""
-        ).trim();
-
-
-        // Check that a real contact email has been configured.
-
-        if (
-            !CONTACT_EMAIL.includes("fayzafaith785@gmail.com") ||
-            CONTACT_EMAIL.includes("fayzafaith785@gmail.com")
-        ) {
-
-            formMessage.textContent =
-                "Please add your contact email in script.js before using this form.";
-
+        if (!formMessage) {
             return;
-
         }
 
+        const isConfiguredContactEmail =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONTACT_EMAIL) &&
+            !CONTACT_EMAIL.includes("YOUR_EMAIL");
 
-        // Prepare the email content.
+        if (!isConfiguredContactEmail) {
+            formMessage.textContent =
+                "The contact email is not configured. Please try again later.";
+            return;
+        }
 
+        const formData = new FormData(contactForm);
+        const name = String(formData.get("name") || "").trim();
+        const email = String(formData.get("email") || "").trim();
+        const subject = String(formData.get("subject") || "").trim();
+        const message = String(formData.get("message") || "").trim();
         const emailBody =
             "Name: " + name +
             "\nEmail: " + email +
             "\n\nMessage:\n" + message;
-
-
         const emailLink =
             "mailto:" + CONTACT_EMAIL +
             "?subject=" + encodeURIComponent(subject) +
             "&body=" + encodeURIComponent(emailBody);
 
-
         formMessage.textContent =
-            "Opening your email application. Review your message and send it there.";
-
-
-        // Open the visitor's email application.
-
+            "Your email app should open with the message ready. Review it and press Send.";
         window.location.href = emailLink;
 
     });
