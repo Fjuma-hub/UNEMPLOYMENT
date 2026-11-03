@@ -60,6 +60,7 @@ if (yearElement) {
 
 
 // =====================================
+// =====================================
 // 4. YOUTH SKILLS REQUEST FORM
 // =====================================
 
@@ -150,3 +151,113 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 // =====================================
 
 console.log("Opportunity Dandora website loaded successfully!");
+
+
+/* =====================================
+   DANDORA SKILLS CONNECT SYSTEM
+===================================== */
+
+function findTraining() {
+
+    const name = document.getElementById("studentName").value.trim();
+    const phone = document.getElementById("studentPhone").value.trim();
+    const skill = document.getElementById("skillChoice").value;
+    const reason = document.getElementById("studentReason").value.trim();
+    const result = document.getElementById("trainingResult");
+
+    if (!name || !phone || !skill) {
+        result.innerHTML = "<p style='color:red;'>Please fill in your name, phone number and preferred skill.</p>";
+        return;
+    }
+
+    const institutions = {
+
+        web: {
+            school: "Moringa School",
+            course: "Web Design",
+            link: "https://moringaschool.com/"
+        },
+
+        graphic: {
+            school: "Dandora Green Light VTC",
+            course: "Graphic Design",
+            link: "https://www.google.com/search?q=Dandora+Green+Light+VTC+Graphic+Design"
+        },
+
+        software: {
+            school: "Moringa School",
+            course: "Software Engineering",
+            link: "https://moringaschool.com/"
+        },
+
+        plumbing: {
+            school: "Bahati Vocational Training Centre",
+            course: "Plumbing",
+            link: "https://www.google.com/search?q=Bahati+Vocational+Training+Centre+Plumbing"
+        },
+
+        electrical: {
+            school: "Bahati Vocational Training Centre",
+            course: "Electrical Installation",
+            link: "https://www.google.com/search?q=Bahati+Vocational+Training+Centre+Electrical"
+        },
+
+        fashion: {
+            school: "Bahati Vocational Training Centre",
+            course: "Fashion Design",
+            link: "https://www.google.com/search?q=Bahati+Vocational+Training+Centre+Fashion+Design"
+        },
+
+        digital: {
+            school: "Moringa School",
+            course: "Digital Skills",
+            link: "https://moringaschool.com/"
+        }
+
+    };
+
+    const selected = institutions[skill];
+
+    result.innerHTML = `
+        <div class="training-match">
+
+            <h3>Application Received!</h3>
+
+            <p>Hello ${escapeHTML(name)}!</p>
+
+            <p>
+                You requested training in:
+                <strong>${selected.course}</strong>
+            </p>
+
+            <h3>Your Training Match</h3>
+
+            <p>
+                Recommended Institution:
+                <strong>${selected.school}</strong>
+            </p>
+
+            <p>
+                Your next step is to visit the institution
+                and explore its available courses.
+            </p>
+
+            <a href="${selected.link}"
+               target="_blank"
+               rel="noopener noreferrer">
+               VISIT ${selected.school.toUpperCase()} →
+            </a>
+
+        </div>
+    `;
+}
+
+function escapeHTML(value) {
+    return value.replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+    })[character]);
+}

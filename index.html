@@ -351,87 +351,77 @@
 
         </section>
 
-        <!-- REQUEST SKILLS FORM -->
-        <section class="section-wrap skills-request-section"
-                 id="skills-request">
 
-            <div class="skills-intro">
-                <span class="eyebrow">YOUR FUTURE STARTS HERE</span>
 
-                <h2>Request Skills Training</h2>
+<!-- DANDORA SKILLS CONNECT -->
+<section class="skills-connect" id="skills-request">
 
-                <p>
-                    Tell us which skills you would like to learn.
-                    Your response can help the project understand
-                    the training interests of young people in Dandora.
-                </p>
+    <div class="skills-heading">
+        <span>YOUR FUTURE STARTS HERE</span>
+        <h2>Request Skills Training</h2>
 
-                <img src="assets/skills-training-youth.jpg"
-                     alt="Young person learning digital skills">
-            </div>
+        <p>
+            Choose the skill you want to learn.
+            We will connect you with an institution
+            that offers your preferred training.
+        </p>
+    </div>
 
-            <form class="skills-form" id="skillsRequestForm">
+    <div class="skills-card">
 
-                <label for="skillsName">Your name</label>
-                <input id="skillsName" type="text"
-                       name="name"
-                       placeholder="Enter your name"
-                       required>
+        <h3>Find Your Training Opportunity</h3>
 
-                <label for="skillsEmail">Your email</label>
-                <input id="skillsEmail" type="email"
-                       name="email"
-                       placeholder="Enter your email"
-                       required>
+        <label for="studentName">Full Name</label>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your full name"
+            required
+        >
 
-                <label for="ageGroup">Your age group</label>
-                <select id="ageGroup" name="ageGroup" required>
-                    <option value="">Select your age group</option>
-                    <option value="Under 18">Under 18</option>
-                    <option value="18–24">18–24</option>
-                    <option value="25–35">25–35</option>
-                    <option value="36 and above">36 and above</option>
-                </select>
+        <label for="studentPhone">Phone Number</label>
+        <input
+            type="tel"
+            id="studentPhone"
+            placeholder="Enter your phone number"
+            required
+        >
 
-                <label for="requestedSkill">
-                    Which skill would you like to learn?
-                </label>
+        <label for="skillChoice">Select Your Preferred Skill</label>
 
-                <select id="requestedSkill" name="skill" required>
-                    <option value="">Choose a skill</option>
-                    <option>Computer Skills</option>
-                    <option>Web Development</option>
-                    <option>Graphic Design</option>
-                    <option>Digital Marketing</option>
-                    <option>Plumbing and Electrical Skills</option>
-                    <option>Tailoring and Fashion Design</option>
-                    <option>Entrepreneurship</option>
-                    <option>Mechanics</option>
-                    <option>Urban Agriculture</option>
-                    <option>Other</option>
-                </select>
+        <select id="skillChoice" required>
+            <option value="">Choose a skill</option>
+            <option value="web">Web Design</option>
+            <option value="graphic">Graphic Design</option>
+            <option value="software">Software Engineering</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical Installation</option>
+            <option value="fashion">Fashion Design</option>
+            <option value="digital">Digital Marketing</option>
+        </select>
 
-                <label for="trainingMessage">
-                    Tell us more about the training you need
-                </label>
+        <label for="studentReason">Why do you want to learn this skill?</label>
 
-                <textarea id="trainingMessage"
-                          name="message"
-                          rows="4"
-                          placeholder="What would you like to learn?"></textarea>
+        <textarea
+            id="studentReason"
+            placeholder="Tell us why you are interested..."
+            rows="4"
+        ></textarea>
 
-                <button class="btn btn-primary" type="submit">
-                    Submit Skills Request
-                </button>
+        <button type="button" onclick="findTraining()">
+            FIND MY TRAINING
+        </button>
 
-                <p id="skillsFormMessage"
-                   class="form-message"
-                   aria-live="polite">
-                    This demonstration form is not connected to an online database yet.
-                </p>
+        <div id="trainingResult" aria-live="polite"></div>
 
-            </form>
-        </section>
+    </div>
+
+</section>
+<!-- END DANDORA SKILLS CONNECT -->
+
+
+
+
 
         <!-- USEFUL WEBSITES -->
         <section class="section-wrap opportunities-section"
