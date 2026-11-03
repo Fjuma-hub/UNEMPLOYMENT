@@ -10,6 +10,7 @@
 // =====================================
 
 const CONTACT_EMAIL = "fayzafaith785@gmail.com";
+const POWER_BI_EMBED_URL = "";
 
 
 // =====================================
@@ -60,8 +61,26 @@ if (yearElement) {
 
 
 // =====================================
+// 4. POWER BI DASHBOARD
 // =====================================
-// 4. YOUTH SKILLS REQUEST FORM
+
+const powerbiArea = document.getElementById("powerbiEmbedArea");
+
+if (powerbiArea && POWER_BI_EMBED_URL.trim()) {
+    const powerbiFrame = document.createElement("iframe");
+    powerbiFrame.src = POWER_BI_EMBED_URL;
+    powerbiFrame.title = "Opportunity Dandora Power BI Dashboard";
+    powerbiFrame.width = "100%";
+    powerbiFrame.height = "550";
+    powerbiFrame.style.border = "0";
+    powerbiFrame.allowFullscreen = true;
+
+    powerbiArea.replaceChildren(powerbiFrame);
+}
+
+
+// =====================================
+// 5. YOUTH SKILLS REQUEST FORM
 // =====================================
 
 const skillsRequestForm =
@@ -115,7 +134,7 @@ if (skillsRequestForm) {
 
 
 // =====================================
-// 5. SMOOTH SCROLLING
+// 6. SMOOTH SCROLLING
 // =====================================
 
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
@@ -147,7 +166,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
 
 // =====================================
-// 6. WEBSITE LOADED
+// 7. WEBSITE LOADED
 // =====================================
 
 console.log("Opportunity Dandora website loaded successfully!");

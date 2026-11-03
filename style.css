@@ -371,6 +371,69 @@ section {
 }
 
 /* =====================================
+   RESEARCH AND POWER BI
+===================================== */
+
+.research-section {
+    background: #eaf7e9;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.dashboard-heading {
+    background: var(--dark-green);
+    color: white;
+    padding: 17px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-heading h3 {
+    font-size: 18px;
+}
+
+.dashboard-heading span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.powerbi-embed {
+    padding: 18px;
+    background: #f5f8f5;
+}
+
+.powerbi-embed iframe {
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+
+.powerbi-preview {
+    margin: 0;
+}
+
+.powerbi-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.powerbi-preview figcaption {
+    padding-top: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =====================================
    TEN SOLUTIONS
 ===================================== */
 
@@ -787,6 +850,15 @@ section {
 
     .contact-section {
         grid-template-columns: 1fr;
+    }
+
+    .dashboard-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-heading h3 {
+        font-size: 16px;
     }
 
 }
