@@ -3,573 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opportunity Dandora explores youth unemployment and connects young people with skills, jobs and enterprise opportunities.">
 
     <title>Opportunity Dandora | Skills, Jobs & Enterprise</title>
 
-    <meta name="description"
-          content="Opportunity Dandora explores youth unemployment and pathways to skills, employment and entrepreneurship in Dandora, Nairobi.">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- HEADER -->
     <header class="site-header" id="top">
-
         <a href="#home" class="brand">
             <span class="brand-mark">OD</span>
-
             <span class="brand-copy">
-                <strong>Opportunity Dandora</strong>
-                <small>SKILLS • JOBS • ENTERPRISE</small>
+                <strong>OPPORTUNITY DANDORA</strong>
+                <small>SKILLS • JOBS • A BRIGHTER FUTURE</small>
             </span>
         </a>
 
-        <button class="menu-toggle"
-                id="menuToggle"
+        <button class="menu-toggle" id="menuToggle"
                 aria-label="Open navigation"
-                aria-expanded="false">
-            ☰
-        </button>
+                aria-expanded="false"
+                aria-controls="navLinks">☰</button>
 
         <nav class="nav-links" id="navLinks">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#research">Research</a>
+            <a href="#problems">Problems</a>
             <a href="#solutions">Solutions</a>
             <a href="#opportunities">Opportunities</a>
-            <a href="#contact" class="nav-cta">Get involved →</a>
+            <a href="#skills-request">Request Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
-
     </header>
 
     <main>
 
         <!-- HERO SECTION -->
         <section class="hero section-wrap" id="home">
-
-            <div class="hero-copy">
-
-                <span class="eyebrow">● DANDORA, NAIROBI</span>
+            <div class="hero-content">
+                <span class="eyebrow">A COMMUNITY WITH POTENTIAL</span>
 
                 <h1>
-                    Turning Potential<br>
-                    Into Opportunity.
+                    Turning Challenges Into
+                    <span>Opportunities.</span>
                 </h1>
 
                 <p>
-                    Exploring unemployment in Dandora, Nairobi, and developing
-                    practical ideas that connect people with skills, jobs,
-                    entrepreneurship and a brighter future.
+                    Exploring youth unemployment in Dandora, Nairobi,
+                    and developing practical ideas that connect young
+                    people with skills, jobs, entrepreneurship and
+                    a brighter future.
                 </p>
 
-                <a href="#solutions" class="button button-lime">
-                    Explore solutions →
-                </a>
-
-                <div class="hero-note">
-                    <span class="dots">● ● ●</span>
-                    Research. Empowerment. Opportunity.
-                </div>
-
-            </div>
-
-            <div class="hero-photo-wrap">
-
-                <img
-                    class="hero-photo"
-                    src="assets/dandora-youth.png"
-                    alt="Young people sitting together in a Dandora neighborhood"
-                >
-
-                <div class="photo-sticker">
-                    Real People,<br>
-                    Real Potential.
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- HOW IT WORKS -->
-        <section class="process section-wrap">
-
-            <div class="process-intro">
-                <span class="eyebrow">HOW IT WORKS</span>
-
-                <h2>From Challenges<br>to Real Solutions.</h2>
-
-                <p>
-                    Listen to the community, understand the issues and explore
-                    positive pathways forward.
-                </p>
-            </div>
-
-            <article class="process-card">
-                <span class="number">01</span>
-                <div class="process-icon">⌕</div>
-
-                <h3>Understand</h3>
-
-                <p>
-                    Research unemployment challenges and listen to community voices.
-                </p>
-            </article>
-
-            <article class="process-card">
-                <span class="number">02</span>
-                <div class="process-icon">▥</div>
-
-                <h3>Discover</h3>
-
-                <p>
-                    Identify skills, training and employment opportunities.
-                </p>
-            </article>
-
-            <article class="process-card">
-                <span class="number">03</span>
-                <div class="process-icon">♧</div>
-
-                <h3>Empower</h3>
-
-                <p>
-                    Explore practical solutions for individuals and communities.
-                </p>
-            </article>
-
-        </section>
-
-        <!-- ABOUT AND POWER BI -->
-        <section class="research-band" id="research">
-
-            <div class="about-block" id="about">
-
-                <span class="eyebrow">ABOUT THE PROJECT</span>
-
-                <h2>Every community has untapped potential.</h2>
-
-                <p>
-                    Opportunity Dandora is a research and community-focused
-                    project exploring unemployment and possible pathways to
-                    economic empowerment in Dandora, Nairobi.
-                </p>
-
-                <a href="#vision" class="text-link">
-                    Explore our vision →
-                </a>
-
-                <img
-                    class="about-photo"
-                    src="assets/dandora-community.png"
-                    alt="Young people gathered on a street in Dandora, Nairobi"
-                >
-
-            </div>
-
-            <div class="dashboard-panel">
-
-                <div class="dashboard-intro">
-
-                    <span class="eyebrow">DATA • EVIDENCE • INSIGHT</span>
-
-                    <h2>The Research Dashboard.</h2>
-
-                    <p>
-                        Explore unemployment research and visualise findings
-                        to communicate patterns and support informed discussion.
-                    </p>
-
-                    <a href="#powerbi" class="button button-lime">
-                        View dashboard →
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="#solutions">
+                        Explore Solutions
                     </a>
 
+                    <a class="btn btn-outline" href="#about">
+                        About the Project
+                    </a>
                 </div>
 
-                <div class="dashboard" id="powerbi">
-
-                    <div class="dashboard-top">
-                        <strong>▮ Opportunity Dandora | Research Dashboard</strong>
-                        <span>POWER BI</span>
-                    </div>
-
-                    <!-- Placeholder cards: replace with verified data -->
-                    <div class="metric-grid">
-
-                        <div class="metric">
-                            <small>Research records</small>
-                            <strong>—</strong>
-                            <em>Add verified data</em>
-                        </div>
-
-                        <div class="metric">
-                            <small>Youth employment</small>
-                            <strong>—</strong>
-                            <em>Not yet supplied</em>
-                        </div>
-
-                        <div class="metric">
-                            <small>Training access</small>
-                            <strong>—</strong>
-                            <em>Not yet supplied</em>
-                        </div>
-
-                        <div class="metric">
-                            <small>Survey coverage</small>
-                            <strong>—</strong>
-                            <em>Not yet supplied</em>
-                        </div>
-
-                    </div>
-
-                    <div class="chart-grid">
-
-                        <div class="chart-card">
-                            <h4>Areas to Explore</h4>
-
-                            <div class="bar-chart">
-                                <div>
-                                    <span style="height:42%"></span>
-                                    <small>Skills</small>
-                                </div>
-
-                                <div>
-                                    <span style="height:68%"></span>
-                                    <small>Jobs</small>
-                                </div>
-
-                                <div>
-                                    <span style="height:52%"></span>
-                                    <small>Training</small>
-                                </div>
-
-                                <div>
-                                    <span style="height:32%"></span>
-                                    <small>Business</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="chart-card">
-                            <h4>Research Categories</h4>
-
-                            <div class="donut-row">
-                                <div class="donut"></div>
-
-                                <ul>
-                                    <li>Skills</li>
-                                    <li>Employment</li>
-                                    <li>Enterprise</li>
-                                    <li>Education</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="chart-card sectors">
-                            <h4>Potential Focus Areas</h4>
-
-                            <div class="sector">
-                                <span>Technical skills</span>
-                                <b style="width:76%"></b>
-                            </div>
-
-                            <div class="sector">
-                                <span>Digital skills</span>
-                                <b style="width:62%"></b>
-                            </div>
-
-                            <div class="sector">
-                                <span>Apprenticeships</span>
-                                <b style="width:55%"></b>
-                            </div>
-
-                            <div class="sector">
-                                <span>Enterprise support</span>
-                                <b style="width:68%"></b>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- REAL POWER BI REPORT WILL APPEAR HERE -->
-                    <div id="powerbiEmbedArea" class="powerbi-embed">
-                        <p>
-                            <strong>Your live Power BI report will appear here.</strong><br>
-                            Add your Power BI embed URL in script.js.
-                        </p>
-                    </div>
-
-                    <p class="dashboard-disclaimer">
-                        Dashboard placeholders are illustrative, not verified
-                        unemployment statistics.
-                    </p>
-
-                </div>
-
+                <p class="hero-note">
+                    Ideas. Empowerment. Opportunity.
+                </p>
             </div>
 
+            <div class="hero-image">
+                <img src="assets/dandora-youth.png"
+                     alt="Young people in a Dandora community setting">
+            </div>
         </section>
 
-        <!-- SOLUTIONS -->
-        <section class="solutions section-wrap" id="solutions">
+        <!-- ABOUT SECTION -->
+        <section class="section-wrap about-section" id="about">
 
             <div class="section-heading">
-
-                <span class="eyebrow">A PATH FORWARD</span>
-
-                <h2>Ideas that create possibilities.</h2>
+                <span class="eyebrow">ABOUT THE PROJECT</span>
+                <h2>About Opportunity Dandora</h2>
 
                 <p>
-                    Practical areas to explore through research, community
-                    engagement and partnerships.
+                    Opportunity Dandora is a community-focused project
+                    exploring unemployment among young people in
+                    Dandora, Nairobi.
                 </p>
-
             </div>
 
-            <article class="solution-card">
-
-                <small>01 / SKILLS</small>
-
-                <h3>Build Skills</h3>
-
-                <p>
-                    Explore vocational, technical and digital training opportunities.
-                </p>
-
-                <a href="#opportunities">Explore training →</a>
-
-            </article>
-
-            <article class="solution-card solution-highlight">
-
-                <small>02 / EMPLOYMENT</small>
-
-                <h3>Connect to Work</h3>
-
-                <p>
-                    Discover vacancies, internships and career resources.
-                </p>
-
-                <a href="#opportunities">Find resources →</a>
-
-            </article>
-
-            <article class="solution-card">
-
-                <small>03 / ENTERPRISE</small>
-
-                <h3>Support Ideas</h3>
-
-                <p>
-                    Explore entrepreneurship, business education and enterprise support.
-                </p>
-
-                <a href="#opportunities">Explore enterprise →</a>
-
-            </article>
-
-        </section>
-
-        <!-- OPPORTUNITIES -->
-        <section class="opportunities section-wrap" id="opportunities">
-
-            <div>
-
-                <span class="eyebrow">YOUR NEXT STEP</span>
-
-                <h2>Find a path that moves you forward.</h2>
-
-                <p>
-                    Explore external resources for jobs, vocational training
-                    and entrepreneurship in Kenya. Check eligibility and
-                    availability directly with each provider.
-                </p>
-
-            </div>
-
-            <div class="opportunity-list">
-
-                <a href="https://www.brightermonday.co.ke/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <span class="op-icon">↗</span>
-
-                    <span>
-                        <strong>Job Opportunities</strong>
-                        <small>Search advertised jobs in Kenya.</small>
-                    </span>
-
-                    <b>→</b>
-
-                </a>
-
-                <a href="https://www.tveta.go.ke/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <span class="op-icon">▤</span>
-
-                    <span>
-                        <strong>Technical Training</strong>
-                        <small>Explore TVET information.</small>
-                    </span>
-
-                    <b>→</b>
-
-                </a>
-
-                <a href="https://www.youthfund.go.ke/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    <span class="op-icon">✦</span>
-
-                    <span>
-                        <strong>Youth Enterprise</strong>
-                        <small>Explore youth business resources.</small>
-                    </span>
-
-                    <b>→</b>
-
-                </a>
-
-            </div>
-
-        </section>
-
-        <!-- VISION AND CONTACT -->
-        <section class="closing section-wrap">
-
-            <div class="vision-card" id="vision">
-
-                <div class="leaf-mark">✳</div>
-
+            <div class="about-content">
                 <div>
-                    <span class="eyebrow">OUR VISION</span>
+                    <p>
+                        The project looks at challenges that can make
+                        it difficult for young people to access
+                        employment, practical training and opportunities
+                        to start businesses.
+                    </p>
 
-                    <h2>
-                        A future where potential becomes progress.
-                    </h2>
+                    <p>
+                        It brings community ideas together to explore
+                        possible solutions and pathways forward.
+                    </p>
+
+                    <a href="#solutions" class="btn btn-primary">
+                        Explore the Solutions
+                    </a>
                 </div>
 
+                <img src="assets/dandora-community.png"
+                     alt="Dandora neighbourhood and community">
+            </div>
+        </section>
+
+        <!-- PROBLEMS SECTION -->
+        <section class="section-wrap problems-section" id="problems">
+
+            <div class="section-heading">
+                <span class="eyebrow">THE CHALLENGE</span>
+                <h2>Challenges Young People May Face</h2>
+
                 <p>
-                    We aim to contribute to a future where people can access
-                    relevant skills, explore meaningful work and develop
-                    opportunities for their ideas.
+                    The project explores barriers that can affect
+                    access to decent work and skills development
+                    in the community.
+                </p>
+            </div>
+
+            <div class="problem-grid">
+
+                <article class="problem-card">
+                    <span class="card-number">01</span>
+                    <h3>Limited Job Opportunities</h3>
+                    <p>
+                        Not enough accessible entry-level work
+                        and pathways into employment.
+                    </p>
+                </article>
+
+                <article class="problem-card">
+                    <span class="card-number">02</span>
+                    <h3>Skills Gaps</h3>
+                    <p>
+                        Some young people may not have access
+                        to practical or in-demand training.
+                    </p>
+                </article>
+
+                <article class="problem-card">
+                    <span class="card-number">03</span>
+                    <h3>Limited Work Experience</h3>
+                    <p>
+                        It can be difficult to get a first
+                        opportunity without previous experience.
+                    </p>
+                </article>
+
+                <article class="problem-card">
+                    <span class="card-number">04</span>
+                    <h3>Business Start-up Barriers</h3>
+                    <p>
+                        New entrepreneurs may need guidance,
+                        networks, equipment or finance.
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="small-note">
+                These are project areas the community can work
+                together to address.
+            </p>
+        </section>
+
+        <!-- TEN SOLUTIONS -->
+        <section class="section-wrap solutions-section" id="solutions">
+
+            <div class="section-heading">
+                <span class="eyebrow">A PATH FORWARD</span>
+
+                <h2>
+                    Our 10 Solutions –
+                    10 Ways to Create Opportunities
+                </h2>
+
+                <p>
+                    Ideas to explore with young people, training
+                    providers, employers and community partners.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+
+                <article class="solution-card">
+                    <img src="assets/solution-01-skills.jpg"
+                         alt="Youth skills training">
+                    <span>01</span>
+                    <h3>Youth Skills and Training</h3>
+                    <p>
+                        Connect young people with practical,
+                        vocational, technical and digital skills training.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-02-apprenticeships.png"
+                         alt="Apprentices learning at work">
+                    <span>02</span>
+                    <h3>Paid Apprenticeships</h3>
+                    <p>
+                        Build links with workshops and employers
+                        for supervised work experience and fair
+                        stipends where possible.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-03-business.png"
+                         alt="Young entrepreneur working">
+                    <span>03</span>
+                    <h3>Youth Business Incubation</h3>
+                    <p>
+                        Offer mentoring, business planning,
+                        bookkeeping guidance and referrals
+                        to suitable support.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-04-recycling.jpg"
+                         alt="Community waste recycling">
+                    <span>04</span>
+                    <h3>Waste Management and Recycling</h3>
+                    <p>
+                        Explore safe community recycling initiatives
+                        with appropriate training and licensed partners.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-05-job-centre.png"
+                         alt="Career adviser helping a job seeker">
+                    <span>05</span>
+                    <h3>Community Job-Matching Centre</h3>
+                    <p>
+                        Support CV writing, interview preparation,
+                        verified vacancies and employer connections.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-06-digital-skills.jpg"
+                         alt="Young person learning computer skills">
+                    <span>06</span>
+                    <h3>Digital Employment Skills</h3>
+                    <p>
+                        Introduce computer literacy, web skills,
+                        design, digital marketing and online safety.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-07-local-business.png"
+                         alt="Local shop owner serving customers">
+                    <span>07</span>
+                    <h3>Support Local Businesses</h3>
+                    <p>
+                        Help local small businesses improve marketing
+                        and record keeping while exploring entry-level roles.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-08-urban-farming.png"
+                         alt="Small community urban garden">
+                    <span>08</span>
+                    <h3>Urban Agriculture</h3>
+                    <p>
+                        Explore small-space food growing,
+                        practical training and links to local markets.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-09-mentorship.png"
+                         alt="Mentor guiding a young person">
+                    <span>09</span>
+                    <h3>Mentorship and Career Guidance</h3>
+                    <p>
+                        Connect young people with career talks,
+                        mentors, CV support and interview practice.
+                    </p>
+                </article>
+
+                <article class="solution-card">
+                    <img src="assets/solution-10-programmes.jpg"
+                         alt="Youth support programmes">
+                    <span>10</span>
+                    <h3>Government Programmes and Funding Referrals</h3>
+                    <p>
+                        Guide eligible young people towards verified
+                        training, enterprise and public support programmes.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EXPECTED IMPACTS AND NEXT STEPS -->
+        <section class="section-wrap impact-next-section">
+
+            <div class="impact-card">
+                <span class="eyebrow">THE CHANGE WE HOPE TO SUPPORT</span>
+                <h2>Expected Impacts</h2>
+
+                <ul>
+                    <li>Improved access to relevant skills</li>
+                    <li>Better connections to employment opportunities</li>
+                    <li>More pathways to income generation</li>
+                    <li>Stronger youth-led businesses</li>
+                    <li>Community-led environmental initiatives</li>
+                    <li>A stronger local economy</li>
+                </ul>
+
+                <p class="small-note">
+                    These are intended outcomes, not results already achieved.
+                </p>
+            </div>
+
+            <div class="next-steps-card">
+                <span class="eyebrow">TURNING IDEAS INTO ACTION</span>
+                <h2>What To Do Next</h2>
+
+                <ol>
+                    <li>Listen to young people through surveys and discussions.</li>
+                    <li>Identify local training and employer partners.</li>
+                    <li>Provide training, guidance and mentorship.</li>
+                    <li>Connect participants to verified opportunities.</li>
+                    <li>Review progress and improve the programme over time.</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <!-- REQUEST SKILLS FORM -->
+        <section class="section-wrap skills-request-section"
+                 id="skills-request">
+
+            <div class="skills-intro">
+                <span class="eyebrow">YOUR FUTURE STARTS HERE</span>
+
+                <h2>Request Skills Training</h2>
+
+                <p>
+                    Tell us which skills you would like to learn.
+                    Your response can help the project understand
+                    the training interests of young people in Dandora.
                 </p>
 
-                <a href="#contact" class="button button-lime">
-                    Get involved →
+                <img src="assets/skills-training-youth.jpg"
+                     alt="Young person learning digital skills">
+            </div>
+
+            <form class="skills-form" id="skillsRequestForm">
+
+                <label for="skillsName">Your name</label>
+                <input id="skillsName" type="text"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+
+                <label for="skillsEmail">Your email</label>
+                <input id="skillsEmail" type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="ageGroup">Your age group</label>
+                <select id="ageGroup" name="ageGroup" required>
+                    <option value="">Select your age group</option>
+                    <option value="Under 18">Under 18</option>
+                    <option value="18–24">18–24</option>
+                    <option value="25–35">25–35</option>
+                    <option value="36 and above">36 and above</option>
+                </select>
+
+                <label for="requestedSkill">
+                    Which skill would you like to learn?
+                </label>
+
+                <select id="requestedSkill" name="skill" required>
+                    <option value="">Choose a skill</option>
+                    <option>Computer Skills</option>
+                    <option>Web Development</option>
+                    <option>Graphic Design</option>
+                    <option>Digital Marketing</option>
+                    <option>Plumbing and Electrical Skills</option>
+                    <option>Tailoring and Fashion Design</option>
+                    <option>Entrepreneurship</option>
+                    <option>Mechanics</option>
+                    <option>Urban Agriculture</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="trainingMessage">
+                    Tell us more about the training you need
+                </label>
+
+                <textarea id="trainingMessage"
+                          name="message"
+                          rows="4"
+                          placeholder="What would you like to learn?"></textarea>
+
+                <button class="btn btn-primary" type="submit">
+                    Submit Skills Request
+                </button>
+
+                <p id="skillsFormMessage"
+                   class="form-message"
+                   aria-live="polite">
+                    This demonstration form is not connected to an online database yet.
+                </p>
+
+            </form>
+        </section>
+
+        <!-- USEFUL WEBSITES -->
+        <section class="section-wrap opportunities-section"
+                 id="opportunities">
+
+            <div class="section-heading">
+                <span class="eyebrow">EXPLORE MORE OPPORTUNITIES</span>
+                <h2>Useful Websites for Youth</h2>
+
+                <p>
+                    Explore these platforms for jobs, training
+                    and career information.
+                </p>
+            </div>
+
+            <div class="opportunity-grid">
+
+                <a class="opportunity-card"
+                   href="https://www.brightermonday.co.ke/"
+                   target="_blank" rel="noopener noreferrer">
+                    <h3>BrighterMonday Kenya</h3>
+                    <p>Search for job opportunities.</p>
+                </a>
+
+                <a class="opportunity-card"
+                   href="https://www.ajiradigital.go.ke/"
+                   target="_blank" rel="noopener noreferrer">
+                    <h3>Ajira Digital</h3>
+                    <p>Explore digital work skills and training.</p>
+                </a>
+
+                <a class="opportunity-card"
+                   href="https://www.tveta.go.ke/"
+                   target="_blank" rel="noopener noreferrer">
+                    <h3>TVETA</h3>
+                    <p>Find information about accredited TVET institutions.</p>
+                </a>
+
+                <a class="opportunity-card"
+                   href="https://www.linkedin.com/jobs/"
+                   target="_blank" rel="noopener noreferrer">
+                    <h3>LinkedIn Jobs</h3>
+                    <p>Explore jobs and professional connections.</p>
+                </a>
+
+                <a class="opportunity-card"
+                   href="https://www.youthfund.go.ke/"
+                   target="_blank" rel="noopener noreferrer">
+                    <h3>Youth Enterprise Development Fund</h3>
+                    <p>Learn about youth enterprise support.</p>
                 </a>
 
             </div>
 
-            <div class="contact-card" id="contact">
+            <p class="small-note">
+                Check each organisation's current eligibility rules,
+                fees and application details directly before applying.
+                This website does not guarantee jobs, training places or funding.
+            </p>
+        </section>
 
+        <!-- CONTACT -->
+        <section class="section-wrap contact-section" id="contact">
+
+            <div>
                 <span class="eyebrow">LET'S CONNECT</span>
-
-                <h2>Have an idea? Let's talk.</h2>
+                <h2>Connect with Opportunity Dandora</h2>
 
                 <p>
-                    Share feedback, research questions or ideas about employment
-                    and opportunities in Dandora.
+                    For questions about skills training and opportunities
+                    in Dandora, get in touch by email.
                 </p>
-
-                <form id="contactForm">
-
-                    <label>
-                        Your name
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Enter your name"
-                            required
-                        >
-                    </label>
-
-                    <label>
-                        Your email
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            required
-                        >
-                    </label>
-
-                    <label class="full-field">
-                        Subject
-
-                        <select name="subject" required>
-                            <option value="">Select a subject</option>
-                            <option>Research question</option>
-                            <option>Partnership</option>
-                            <option>Training opportunity</option>
-                            <option>General feedback</option>
-                        </select>
-                    </label>
-
-                    <label class="full-field">
-                        Your message
-
-                        <textarea
-                            name="message"
-                            placeholder="Write your message..."
-                            rows="3"
-                            required
-                        ></textarea>
-                    </label>
-
-                    <button class="button button-lime full-field" type="submit">
-                        Prepare message →
-                    </button>
-
-                    <p id="formMessage"
-                       class="form-message full-field"
-                       aria-live="polite"></p>
-
-                </form>
-
+                <a class="btn btn-primary"
+                   href="mailto:fayzafaith785@gmail.com">
+                    Email Opportunity Dandora
+                </a>
             </div>
-
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-
-        <a href="#top" class="brand footer-brand">
+        <a href="#home" class="brand footer-brand">
             <span class="brand-mark">OD</span>
-
             <span class="brand-copy">
-                <strong>Opportunity Dandora</strong>
-                <small>SKILLS • JOBS • ENTERPRISE</small>
+                <strong>OPPORTUNITY DANDORA</strong>
+                <small>SKILLS • JOBS • A BRIGHTER FUTURE</small>
             </span>
         </a>
 
-        <p>
-            Researching challenges. Exploring solutions. Building possibilities.
+        <p>Together, we can build a brighter future for the youth of Dandora.</p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#opportunities">Opportunities</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <p class="copyright">
+            &copy; <span id="year"></span> Opportunity Dandora. Project website.
         </p>
-
-        <small>
-            © <span id="year"></span> Opportunity Dandora.
-            Educational and research project.
-        </small>
-
-        <a href="#top" class="back-top">Back to top ↑</a>
-
     </footer>
-
-    <script src="script.js"></script>
 
 </body>
 </html>

@@ -1,20 +1,20 @@
 "use strict";
 
-/* ========================================
-   OPPORTUNITY DANDORA WEBSITE JAVASCRIPT
-======================================== */
+/* =====================================
+   OPPORTUNITY DANDORA WEBSITE
+   JAVASCRIPT
+===================================== */
 
+// =====================================
+// 1. WEBSITE SETTINGS
+// =====================================
 
-/* 1. CONFIGURATION */
-
-// Replace this with your actual Power BI embed URL.
-const POWER_BI_EMBED_URL =
-    "PASTE_YOUR_POWER_BI_EMBED_URL_HERE";
-
-// Replace this with the email address for receiving messages.
 const CONTACT_EMAIL = "fayzafaith785@gmail.com";
 
-/* 2. MOBILE NAVIGATION */
+
+// =====================================
+// 2. MOBILE NAVIGATION MENU
+// =====================================
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
@@ -23,144 +23,130 @@ if (menuToggle && navLinks) {
 
     menuToggle.addEventListener("click", function () {
 
-        const isOpen = navLinks.classList.toggle("open");
+        navLinks.classList.toggle("active");
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
+        const isOpen = navLinks.classList.contains("active");
 
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation" : "Open navigation"
-        );
-
-        menuToggle.textContent = isOpen ? "×" : "☰";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen ? "✕" : "☰";
 
     });
 
-
-    // Close the mobile menu after clicking a navigation link.
-
+    // Close menu after clicking a navigation link
     navLinks.querySelectorAll("a").forEach(function (link) {
 
         link.addEventListener("click", function () {
 
-            navLinks.classList.remove("open");
+            navLinks.classList.remove("active");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation"
-            );
-
+            menuToggle.setAttribute("aria-expanded", "false");
             menuToggle.textContent = "☰";
 
         });
 
     });
-
 }
 
 
-/* 3. AUTOMATIC COPYRIGHT YEAR */
+// =====================================
+// 3. AUTOMATIC FOOTER YEAR
+// =====================================
 
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
-
     yearElement.textContent = new Date().getFullYear();
-
 }
 
 
-/* 4. POWER BI DASHBOARD CONNECTION */
+// =====================================
+// 4. YOUTH SKILLS REQUEST FORM
+// =====================================
 
-const embedArea = document.getElementById("powerbiEmbedArea");
+const skillsRequestForm =
+    document.getElementById("skillsRequestForm");
 
-const isConfiguredPowerBI =
-    POWER_BI_EMBED_URL.startsWith("https://") &&
-    POWER_BI_EMBED_URL.includes("powerbi.com") &&
-    !POWER_BI_EMBED_URL.includes("PASTE_YOUR");
+const skillsFormMessage =
+    document.getElementById("skillsFormMessage");
 
+if (skillsRequestForm) {
 
-if (embedArea && isConfiguredPowerBI) {
-
-    // Remove the placeholder message.
-
-    embedArea.innerHTML = "";
-
-    embedArea.style.display = "block";
-
-
-    // Create the Power BI iframe.
-
-    const frame = document.createElement("iframe");
-
-    frame.title = "Opportunity Dandora Power BI Research Dashboard";
-
-    frame.src = POWER_BI_EMBED_URL;
-
-    frame.loading = "lazy";
-
-    frame.allowFullscreen = true;
-
-
-    // Display the report.
-
-    embedArea.appendChild(frame);
-
-}
-
-
-/* 5. CONTACT FORM */
-
-const contactForm = document.getElementById("contactForm");
-
-const formMessage = document.getElementById("formMessage");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", function (event) {
+    skillsRequestForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        if (!formMessage) {
-            return;
-        }
+        const formData = new FormData(skillsRequestForm);
 
-        const isConfiguredContactEmail =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONTACT_EMAIL) &&
-            !CONTACT_EMAIL.includes("YOUR_EMAIL");
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const ageGroup = formData.get("ageGroup");
+        const skill = formData.get("skill");
+        const message = formData.get("message");
 
-        if (!isConfiguredContactEmail) {
-            formMessage.textContent =
-                "The contact email is not configured. Please try again later.";
-            return;
-        }
+        const subject = encodeURIComponent(
+            "Youth Skills Training Request - Opportunity Dandora"
+        );
 
-        const formData = new FormData(contactForm);
-        const name = String(formData.get("name") || "").trim();
-        const email = String(formData.get("email") || "").trim();
-        const subject = String(formData.get("subject") || "").trim();
-        const message = String(formData.get("message") || "").trim();
-        const emailBody =
-            "Name: " + name +
-            "\nEmail: " + email +
-            "\n\nMessage:\n" + message;
-        const emailLink =
+        const emailBody = encodeURIComponent(
+            "NEW SKILLS TRAINING REQUEST\n\n" +
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Age Group: " + ageGroup + "\n" +
+            "Requested Skill: " + skill + "\n" +
+            "Additional Information: " + message
+        );
+
+        const mailLink =
             "mailto:" + CONTACT_EMAIL +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(emailBody);
+            "?subject=" + subject +
+            "&body=" + emailBody;
 
-        formMessage.textContent =
-            "Your email app should open with the message ready. Review it and press Send.";
-        window.location.href = emailLink;
+        if (skillsFormMessage) {
+            skillsFormMessage.textContent =
+                "Your email application will open. Please send the prepared request.";
+        }
+
+        window.location.href = mailLink;
 
     });
 
 }
+
+
+// =====================================
+// 5. SMOOTH SCROLLING
+// =====================================
+
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+        const targetId = this.getAttribute("href");
+
+        if (targetId && targetId.length > 1) {
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        }
+
+    });
+
+});
+
+
+// =====================================
+// 6. WEBSITE LOADED
+// =====================================
+
+console.log("Opportunity Dandora website loaded successfully!");
